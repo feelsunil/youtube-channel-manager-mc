@@ -1,0 +1,10 @@
+services:
+  youtube-mcp:
+    build: .
+    env_file: .env
+    ports:
+      - "8787:8787"
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+    restart: unless-stopped
